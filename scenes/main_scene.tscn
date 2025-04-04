@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c61f2v156xxfo"]
+
+[ext_resource type="PackedScene" uid="uid://bg66hass0xf48" path="res://scenes/sapoConcho.tscn" id="1_w2twt"]
+[ext_resource type="Texture2D" uid="uid://b05h4mavf0gpt" path="res://assets/bg layer1-sky.png" id="2_pu3yx"]
+[ext_resource type="Texture2D" uid="uid://dswn70i3vjd7y" path="res://assets/bglayer3-cerrolastetas.png" id="3_gubc5"]
+[ext_resource type="Texture2D" uid="uid://b2cottcla8wki" path="res://assets/layer4-plaintains.png" id="4_rt2n2"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_w2twt")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky Layer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.01, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky Layer"]
+texture = ExtResource("2_pu3yx")
+
+[node name="Mountain Layer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.03, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountain Layer"]
+texture = ExtResource("3_gubc5")
+
+[node name="Tree Layer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.05, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Tree Layer"]
+position = Vector2(-35, -40)
+scale = Vector2(1.09306, 1.06172)
+texture = ExtResource("4_rt2n2")
