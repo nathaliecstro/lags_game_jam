@@ -11,5 +11,22 @@ config_version=5
 [application]
 
 config/name="lags_game_jam"
+run/main_scene="uid://c61f2v156xxfo"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=90
+window/size/viewport_height=160
+window/size/window_width_override=36
+window/size/window_height_override=640
+window/stretch/mode="canvas_items"
+
+[rendering]
+
+2d/stretch/mode="disabled"
+2d/size/window_height_override=0
+2d/size/window_width_override=0
+2d/size/viewport_height=648
+2d/size/viewport_width=1152
